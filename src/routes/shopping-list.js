@@ -59,6 +59,7 @@ router.post("/createList", authorize("write"), (req, res) => {
     return res.status(400).json({
       status: "error",
       message: "Request body cannot be empty",
+      data: req.body,
     });
   }
 
@@ -105,7 +106,7 @@ router.put("/updateList/:id", authorize("write"), (req, res) => {
 
   shoppingLists[listIndex] = { id, ...value };
 
-  res.json({
+  res.status(200).json({
     status: "success",
     message: "Shopping list updated successfully",
     data: shoppingLists[listIndex],

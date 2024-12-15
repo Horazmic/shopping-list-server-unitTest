@@ -1,0 +1,24 @@
+# Dependencies
+node_modules
+
+# Environment variables
+.env
+
+# Logs
+*.log
+logs/
+pids/
+*.pid
+*.pid.lock
+
+# OS-specific files
+.DS_Store        # macOS
+Thumbs.db        # Windows
+
+# IDE-specific files
+.vscode/
+.idea/
+
+# Build output (if applicable)
+dist/
+build/
